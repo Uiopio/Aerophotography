@@ -2,9 +2,13 @@ import picamera
 import serial
 import time
 
+
+# Класс работы с uart, где
+# port = '/dev/serial0' по умолчанию является юартом
+# baud = 9600 скорость обмена данными
 class Uart:
-    def __init__(self, port = '/dev/serial0', boud = 9600, timeout = 1):
-        self.uart = serial.Serial(port, boud, timeout = timeout)
+    def __init__(self, port = '/dev/serial0', baud = 9600, timeout = 1):
+        self.uart = serial.Serial(port, baud, timeout = timeout)
         self.uart.flush() # очистка юарта
 
     # Принять сообщение

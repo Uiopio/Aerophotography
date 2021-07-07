@@ -1,2 +1,4 @@
 .idea/
 venv/
+/3d models/solid/
+/3d models/stl/
